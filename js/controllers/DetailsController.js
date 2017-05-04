@@ -1,6 +1,11 @@
 angular.module('mainApp')
-  .controller('DetailsController', function ($scope, $rootScope, $routeParams) {
+  .controller('DetailsController', function ($scope, $rootScope, $routeParams, dataService) {
     $rootScope.section = 'details'
-    var result = $routeParams.result
-    $scope.result = result
+    var id = $routeParams.result
+    // $scope.id = id
+
+    dataService.searchEmployeeById(id)
+      .then(function (dataEmployee) {
+        $scope.dataEmployee = dataEmployee
+      })
   })

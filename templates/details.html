@@ -6,7 +6,7 @@
             </div>
             <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
                 <div class="container" style="border-bottom:1px solid black">
-                    <h2>Details for {{ result }}</h2>
+                    <h2>Details for {{ dataEmployee.first_name }} {{ dataEmployee.last_name }}</h2>
                 </div>
                 <hr>
                 <ul class="container details">
@@ -14,17 +14,12 @@
                         <p><span class="glyphicon glyphicon-earphone one" style="width:50px;"></span>+91 90000 00000</p>
                     </li>
                     <li>
-                        <p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>somerandom@email.com</p>
+                        <p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>{{ dataEmployee.email }}</p>
                     </li>
                     <li>
-                        <p><span class="glyphicon glyphicon-map-marker one" style="width:50px;"></span>Hyderabad</p>
-                    </li>
-                    <li>
-                        <p><span class="glyphicon glyphicon-new-window one" style="width:50px;"></span><a href="#">www.example.com</p></a>
+                        <p><span class="glyphicon glyphicon-new-window one" style="width:50px;"></span><a href="#">{{dataEmployee.ip_address}}</p></a>
                 </ul>
             </div>
         </div>
     </div>
 </div>
-
-<div ng-include src="'/templates/includes/footer.html'"></div>

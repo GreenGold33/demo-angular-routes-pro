@@ -2,8 +2,7 @@ angular.module('mainApp')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: '/templates/home.html',
-        controller: 'HomeController'
+        templateUrl: '/templates/home.html'
       })
       .when('/search/:item', {
         templateUrl: '/templates/results.html',
